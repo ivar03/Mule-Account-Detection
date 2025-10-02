@@ -625,8 +625,8 @@ class BlockchainFeatureEngineer:
 if __name__ == "__main__":
     # Load the generated datasets
     print("Loading datasets...")
-    wallets_df = pd.read_csv("E:/mule_account_detection/data/dataset/blockchain_wallets.csv")
-    transactions_df = pd.read_csv("E:/mule_account_detection/data/dataset/blockchain_transactions.csv")
+    wallets_df = pd.read_csv("/home/ivar03/Desktop/mule_bank_account_detection_pipeline/Mule-Account-Detection/data/dataset/blockchain_wallets.csv")
+    transactions_df = pd.read_csv("/home/ivar03/Desktop/mule_bank_account_detection_pipeline/Mule-Account-Detection/data/dataset/blockchain_transactions.csv")
     
     print(f"Loaded {len(wallets_df):,} wallets and {len(transactions_df):,} transactions")
     
@@ -637,7 +637,7 @@ if __name__ == "__main__":
     wallet_features = feature_engineer.engineer_all_features()
     
     # Save features
-    feature_engineer.save_features('refined_data/blockchain_wallet_features.csv')
+    feature_engineer.save_features('/home/ivar03/Desktop/mule_bank_account_detection_pipeline/Mule-Account-Detection/models/step_1_feature_engineering/refined_data/blockchain_wallet_features.csv')
     
     # Display sample
     print("\nSample features (first 5 wallets):")
